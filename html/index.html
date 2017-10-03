@@ -3,8 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Singleton</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 </head>
 <body>
+
+<div class="container">
+    <div class="row">
+        <div class="alert col-md-3 alert-danger">
+            ECMAScript 6 Singleton Example
+        </div>
+    </div>
+    <div class="row">
+        <div class="alert col-md-8 alert-success">
+            <pre>
+                <code>
+    let instance = null; // Default value
+
+    class Singleton {
+        constructor () {
+            if(!instance){
+                instance = this;
+            }
+            this.createInstance = new Object('my Value'); // give a property for testing
+            return instance;
+        }
+    }
+
+    let instance1 = new Singleton();
+    let instance2 = new Singleton();
+    console.log(instance1.createInstance === instance2.createInstance);  // return true
+                </code>
+            </pre>
+        </div>
+    </div>
+    <div class="row col-md-8 alert-warning">
+        <h2>Result:&nbsp;</h2><br />
+        <h2></h2>
+    </div>
+</div>
+
 
 <script src="../js/app.js"></script>
 
